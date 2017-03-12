@@ -16,8 +16,8 @@ func (s sortRunes) Len() int {
     return len(s)
 }
 
-func SortString(s string) string {
+func SortString(s string) []rune {
     r := []rune(s)
     sort.Sort(sortRunes(r))
-    return string(r)
+    return r
 }

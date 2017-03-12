@@ -25,7 +25,7 @@ func TestIsUnique(t *testing.T) {
 
 func TestIsUniqueWithoutDS(t *testing.T) {
     for _, str := range strings {
-        if IsUnique(str.str) != str.isUnique {
+        if IsUniqueWithoutDS(str.str) != str.isUnique {
             t.Error("string", str.str, "is expected isUnique =", str.isUnique, "but found otherwise")
         }
     }
