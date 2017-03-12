@@ -1,13 +1,13 @@
-package exercise
+package p1
 
 import "testing"
 
-type TestStr struct {
+type uniqueTestStr struct {
     str string
     isUnique bool
 }
 
-var strings []TestStr = []TestStr{
+var uniqueTestStrs []uniqueTestStr = []uniqueTestStr{
     {"", true},
     {"Hello", false},
     {"Bye, World", true},
@@ -16,7 +16,7 @@ var strings []TestStr = []TestStr{
 }
 
 func TestIsUnique(t *testing.T) {
-    for _, str := range strings {
+    for _, str := range uniqueTestStrs {
         if IsUnique(str.str) != str.isUnique {
             t.Error("string", str.str, "is expected isUnique =", str.isUnique, "but found otherwise")
         }
@@ -24,7 +24,7 @@ func TestIsUnique(t *testing.T) {
 }
 
 func TestIsUniqueWithoutDS(t *testing.T) {
-    for _, str := range strings {
+    for _, str := range uniqueTestStrs {
         if IsUniqueWithoutDS(str.str) != str.isUnique {
             t.Error("string", str.str, "is expected isUnique =", str.isUnique, "but found otherwise")
         }
