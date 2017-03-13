@@ -1,7 +1,7 @@
 package p2
 
 import (
-    "utils"
+    "github.com/DheerendraRathor/ctci-go/utils"
 )
 
 func ArePermutations(str1, str2 string) bool  {

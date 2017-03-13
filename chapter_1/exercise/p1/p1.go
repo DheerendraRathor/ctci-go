@@ -1,7 +1,7 @@
 package p1
 
 import (
-    "utils"
+    "github.com/DheerendraRathor/ctci-go/utils"
 )
 
 func IsUnique(str string) bool {
