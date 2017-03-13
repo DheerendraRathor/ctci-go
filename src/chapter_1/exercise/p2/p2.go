@@ -1,6 +1,8 @@
 package p2
 
-import "../../../utils"
+import (
+    "utils"
+)
 
 func ArePermutations(str1, str2 string) bool  {
     if len(str1) != len(str2) {

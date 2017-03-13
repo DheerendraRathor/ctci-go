@@ -1,7 +1,7 @@
 package p1
 
 import (
-    "../../../utils"
+    "utils"
 )
 
 func IsUnique(str string) bool {
