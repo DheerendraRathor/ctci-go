@@ -19,6 +19,7 @@ var testData []testStruct = []testStruct {
     {"plu", "plur", true},
     {"ʥቕॵཚچ", "ʥʥॵཚچ", true},
     {"ʥቕॵཚچ", "ʥچʥཚچ", false},
+    {"abcd", "ab", false},
 }
 
 func TestIsOneAway(t *testing.T) {
