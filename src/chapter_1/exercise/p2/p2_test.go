@@ -13,6 +13,7 @@ var permTestStrings []permTestStr = []permTestStr {
     {"", "a", false},
     {"Hello", "oHell", true},
     {"Hello", "hola", false},
+    {"Hello", "World", false},
     {"ʥቕॵཚچ", "ቕॵཚچʥ", true},
     {"ʥቕॵཚچ", "ʥॵཚچ", false},
 }
