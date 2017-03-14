@@ -1,6 +1,9 @@
 package p7
 
-import "testing"
+import (
+    "testing"
+    "github.com/DheerendraRathor/ctci-go/utils"
+)
 
 type testStruct struct {
     input [][]int32
@@ -28,51 +31,12 @@ var testData []testStruct = []testStruct {
 
 func TestRotateMatrix(t *testing.T) {
     for _, data := range testData {
-        originalInputSlice := copySlice(data.input)
+        originalInputSlice := utils.Copy2DSlice(data.input)
         output := RotateMatrix(originalInputSlice)
-        if !areMatrixEqual(output, data.output) {
+        if !utils.AreInt32MatrixEqual(output, data.output) {
             t.Errorf("Input: %v output:%v Expected output:%v\n", data.input, output, data.output)
         }
     }
-}
-
-func copySlice(m [][]int32) [][]int32 {
-    newSlice := make([][]int32, len(m))
-    for i := 0; i < len(m); i++ {
-        newSlice[i] = make([]int32, len(m[i]))
-    }
-
-    for i := 0; i < len(m); i++ {
-        for j := 0; j < len(m[0]); j++ {
-            newSlice[i][j] = m[i][j]
-        }
-    }
-
-    return newSlice
-}
-
-func areMatrixEqual(m1, m2 [][]int32)  bool {
-    if len(m1) != len(m2) {
-        return false
-    }
-
-    if len(m1) == 0 {
-        return true
-    }
-
-    if len(m1[0]) != len(m2[0]) {
-        return false
-    }
-
-    for i := 0; i< len(m1); i++ {
-        for j := 0; j < len(m1[0]); j++ {
-            if m1[i][j] != m2[i][j] {
-                return false
-            }
-        }
-    }
-
-    return true
 }
 
 func TestRotateMatrixWithPanic(t *testing.T) {
