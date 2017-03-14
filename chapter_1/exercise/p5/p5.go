@@ -1,5 +1,7 @@
 package p5
 
+import "github.com/DheerendraRathor/ctci-go/utils"
+
 func IsOneAway(input, output string) bool {
     isOneAway := true
 
@@ -10,14 +12,14 @@ func IsOneAway(input, output string) bool {
     if inputLength == outputLength - 1 {
         for i := 0; i < inputLength; i++ {
             if inputRunes[i] != outputRunes[i] {
-                isOneAway = areEqual(inputRunes[i:], outputRunes[i+1:])
+                isOneAway = utils.AreRuneSlicesEqual(inputRunes[i:], outputRunes[i+1:])
                 break
             }
         }
     } else if inputLength == outputLength {
         for i := 0; i < inputLength; i++ {
             if inputRunes[i] != outputRunes[i] {
-                isOneAway = areEqual(inputRunes[i+1:], outputRunes[i+1:])
+                isOneAway = utils.AreRuneSlicesEqual(inputRunes[i+1:], outputRunes[i+1:])
                 break
             }
         }
@@ -25,7 +27,7 @@ func IsOneAway(input, output string) bool {
         inputRunes, outputRunes = outputRunes, inputRunes
         for i := 0; i < outputLength; i++ {
             if inputRunes[i] != outputRunes[i] {
-                isOneAway = areEqual(inputRunes[i:], outputRunes[i+1:])
+                isOneAway = utils.AreRuneSlicesEqual(inputRunes[i:], outputRunes[i+1:])
                 break
             }
         }
@@ -34,18 +36,4 @@ func IsOneAway(input, output string) bool {
     }
 
     return isOneAway
-}
-
-func areEqual(r1, r2 []rune) bool {
-    if len(r1) != len(r2) {
-        return false
-    }
-
-    for index, char := range r1 {
-        if char != r2[index] {
-            return false
-        }
-    }
-
-    return true
 }

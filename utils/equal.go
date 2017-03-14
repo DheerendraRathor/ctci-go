@@ -23,3 +23,17 @@ func AreInt32MatrixEqual(m1, m2 [][]int32)  bool {
 
     return true
 }
+
+func AreRuneSlicesEqual(r1, r2 []rune) bool {
+    if len(r1) != len(r2) {
+        return false
+    }
+
+    for index, char := range r1 {
+        if char != r2[index] {
+            return false
+        }
+    }
+
+    return true
+}
