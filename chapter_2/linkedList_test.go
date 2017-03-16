@@ -51,6 +51,12 @@ func TestLinkedList_DeleteNodeByRef(t *testing.T) {
     if "34Hi" != stringVal {
         t.Errorf("Expected: 134Hi, Got: %v", stringVal)
     }
+
+    list.DeleteNodeByRef(nil)
+    stringVal = list.String()
+    if "34Hi" != stringVal {
+        t.Errorf("Expected: 134Hi, Got: %v", stringVal)
+    }
 }
 
 func TestLinkedList_Equals(t *testing.T) {

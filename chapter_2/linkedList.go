@@ -97,25 +97,30 @@ func (l *LinkedList) Equals(l1 *LinkedList) bool {
     currentLNode := l.Head
     currentL1Node := l1.Head
 
+    areEqual := true
+
     for true {
         if currentLNode == nil && currentL1Node == nil {
-            return true
+            areEqual = true
+            break
         }
 
         if currentLNode != nil &&
             currentL1Node != nil &&
             currentLNode.Value != currentL1Node.Value {
-            return false
+            areEqual = false
+            break
         } else if currentLNode == nil ||
             currentL1Node == nil {
-            return false
+            areEqual = false
+            break
         }
 
         currentLNode = currentLNode.Next
         currentL1Node = currentL1Node.Next
     }
 
-    return true
+    return areEqual
 }
 
 func SliceToLinkedList(values []interface{}) *LinkedList {
