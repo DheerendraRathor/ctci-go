@@ -34,9 +34,11 @@ func (l *LinkedList) AddNodesBySlice(values []interface{}) {
         return
     }
 
+    startIndex := 0
     if l.Head == nil {
         l.Head = new(Node)
         l.Head.Value = values[0]
+        startIndex = 1
     }
 
     lastNode := l.Head
@@ -44,7 +46,7 @@ func (l *LinkedList) AddNodesBySlice(values []interface{}) {
         lastNode = lastNode.Next
     }
 
-    for i := 1; i < len(values); i++ {
+    for i := startIndex; i < len(values); i++ {
         temp := &Node{Value: values[i], Prev: lastNode}
         lastNode.Next = temp
         lastNode = temp
