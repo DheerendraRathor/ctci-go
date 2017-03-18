@@ -15,10 +15,10 @@ type LinkedList struct {
     Head *Node
 }
 
-func (l *LinkedList) AddNode(val interface{}) {
+func (l *LinkedList) AddNode(val interface{}) *Node {
     if l.Head == nil {
         l.Head = &Node{Value: val}
-        return
+        return l.Head
     }
 
     currentNode := l.Head
@@ -27,6 +27,7 @@ func (l *LinkedList) AddNode(val interface{}) {
     }
 
     currentNode.Next = &Node{Value: val, Prev: currentNode}
+    return currentNode.Next
 }
 
 func (l *LinkedList) AddNodesBySlice(values []interface{}) {
