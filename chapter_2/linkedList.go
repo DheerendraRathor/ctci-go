@@ -124,8 +124,23 @@ func (l *LinkedList) Equals(l1 *LinkedList) bool {
     return areEqual
 }
 
+// Returns last node of list l
+// If head is nil then it returns nil.
+func (l *LinkedList) Last() *Node {
+    currentNode := l.Head
+    lastNode := l.Head
+
+    for currentNode != nil {
+        lastNode = currentNode
+        currentNode = currentNode.Next
+    }
+    return lastNode
+}
+
 func SliceToLinkedList(values []interface{}) *LinkedList {
     list := new(LinkedList)
     list.AddNodesBySlice(values)
     return list
 }
+
+

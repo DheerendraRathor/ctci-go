@@ -110,3 +110,23 @@ func TestSliceToLinkedList(t *testing.T) {
         t.Errorf("Expected: 12, Got: %v", stringVal)
     }
 }
+
+func TestLinkedList_Last(t *testing.T) {
+    nullList := SliceToLinkedList([]interface{}{})
+    lastNode := nullList.Last()
+    if lastNode != nil {
+        t.Error("Expected last node to be nil, but it isn't")
+    }
+
+    headOnlyList := SliceToLinkedList([]interface{}{1})
+    lastNode = headOnlyList.Last()
+    if lastNode != headOnlyList.Head {
+        t.Error("Last node is not head in case of headonly list")
+    }
+
+    someElementList := SliceToLinkedList([]interface{}{1, 2, 3})
+    lastNode = someElementList.Last()
+    if lastNode.Value != 3 {
+        t.Error("Last node is not 3 in someElementList")
+    }
+}
