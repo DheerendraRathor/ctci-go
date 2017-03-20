@@ -149,6 +149,17 @@ func (l *LinkedList) Last() *Node {
     return lastNode
 }
 
+func (l *LinkedList) Length() int {
+    count := 0
+    currentNode := l.Head
+    for currentNode != nil {
+        count++
+        currentNode = currentNode.Next
+    }
+
+    return count
+}
+
 func SliceToLinkedList(values []interface{}) *LinkedList {
     list := new(LinkedList)
     list.AddNodesBySlice(values)

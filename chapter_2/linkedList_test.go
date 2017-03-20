@@ -143,3 +143,21 @@ func TestLinkedList_Last(t *testing.T) {
         t.Error("Last node is not 3 in someElementList")
     }
 }
+
+func TestLinkedList_Length(t *testing.T) {
+    list := new(LinkedList)
+    if list.Length() != 0 {
+        t.Error("Length of empty list is not 0")
+    }
+
+    list.AddNode(10)
+    list.AddNode(20)
+    if list.Length() != 2 {
+        t.Error("Expected Length is not 2")
+    }
+
+    list.DeleteNodeByRef(list.Head)
+    if list.Length() != 1 {
+        t.Error("Expected Length is not 1")
+    }
+}
