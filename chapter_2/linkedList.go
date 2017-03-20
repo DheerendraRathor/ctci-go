@@ -30,6 +30,18 @@ func (l *LinkedList) AddNode(val interface{}) *Node {
     return currentNode.Next
 }
 
+func (l *LinkedList) AddNodeToFront(val interface{}) *Node {
+    newNode := &Node{Value: val, Next: l.Head}
+
+    if l.Head != nil {
+        l.Head.Prev = newNode
+    }
+
+    l.Head = newNode
+
+    return newNode
+}
+
 func (l *LinkedList) AddNodesBySlice(values []interface{}) {
     if len(values) == 0 {
         return

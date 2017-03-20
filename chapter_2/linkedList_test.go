@@ -14,6 +14,19 @@ func TestLinkedList_AddNode(t *testing.T) {
     }
 }
 
+func TestLinkedList_AddNodeToFront(t *testing.T) {
+    list := new(LinkedList)
+
+    for i := 0; i < 5; i++ {
+        list.AddNodeToFront(i)
+    }
+
+    stringVal := list.String()
+    if "43210" != stringVal {
+        t.Errorf("Expected: 43210, Got: %v", stringVal)
+    }
+}
+
 func TestLinkedList_AddNodesBySlice(t *testing.T) {
     list := new(LinkedList)
 
