@@ -10,7 +10,7 @@ func (q *Queue) IsEmpty() bool {
 }
 
 func (q *Queue) Add(item interface{}) {
-    newNode := &Node{Value: item, Prev: q.last}
+    newNode := &Node{Value: item}
 
     if q.first == nil {
         q.first = newNode
