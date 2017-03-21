@@ -25,9 +25,6 @@ func TestStack_Peek(t *testing.T) {
     if err == nil {
         t.Error("I tried to peek empty stack. Didn't get any error")
     }
-    if err.Error() != "Stack is empty!" {
-        t.Errorf("I'm pretty sure I printed \"Stack is empty!\", Got something else: \"%s\"", err.Error())
-    }
 
     stack.Push(10)
     topVal, err := stack.Peek()

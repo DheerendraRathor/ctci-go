@@ -1,13 +1,5 @@
 package collections
 
-type StackEmptyError struct {
-    
-}
-
-func (s StackEmptyError) Error() string {
-    return "Stack is empty!"
-}
-
 type Stack struct {
     top *Node
 }
@@ -17,11 +9,11 @@ func (s *Stack) IsEmpty() bool {
 }
 
 // Returns the top element of stack. If stack is empty then returns error of type StackEmptyError
-func (s *Stack) Peek() (interface{}, error) {
+func (s *Stack) Peek() (interface{}, *DataStructureEmptyError) {
     if !s.IsEmpty() {
         return s.top.Value, nil
     } else {
-        return nil, &StackEmptyError{}
+        return nil, &DataStructureEmptyError{}
     }
 }
 
@@ -29,9 +21,9 @@ func (s *Stack) Push(val interface{}) {
     s.top = &Node{Value: val, Prev: s.top}
 }
 
-func (s *Stack) Pop() (interface{}, error) {
+func (s *Stack) Pop() (interface{}, *DataStructureEmptyError) {
     if s.IsEmpty() {
-        return nil, &StackEmptyError{}
+        return nil, &DataStructureEmptyError{}
     }
 
     top := s.top
