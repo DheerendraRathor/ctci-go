@@ -1,4 +1,4 @@
-package chapter_2
+package collections
 
 import "testing"
 

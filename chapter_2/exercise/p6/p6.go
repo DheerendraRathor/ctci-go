@@ -1,8 +1,8 @@
 package p6
 
-import "github.com/DheerendraRathor/ctci-go/chapter_2"
+import "github.com/DheerendraRathor/ctci-go/collections"
 
-func IsLinkedListPalindrome(list chapter_2.LinkedList) bool {
+func IsLinkedListPalindrome(list collections.LinkedList) bool {
 
     if list.Head == nil {
         return true

@@ -2,27 +2,27 @@ package p1
 
 import (
     "testing"
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
     "fmt"
 )
 
 type testStruct struct {
-    input *chapter_2.LinkedList
-    output *chapter_2.LinkedList
+    input *collections.LinkedList
+    output *collections.LinkedList
 }
 
 var testData []testStruct = []testStruct {
     {
-        chapter_2.SliceToLinkedList([]interface{}{}),
-        chapter_2.SliceToLinkedList([]interface{}{}),
+        collections.SliceToLinkedList([]interface{}{}),
+        collections.SliceToLinkedList([]interface{}{}),
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1}),
-        chapter_2.SliceToLinkedList([]interface{}{1}),
+        collections.SliceToLinkedList([]interface{}{1}),
+        collections.SliceToLinkedList([]interface{}{1}),
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1, 2, 1, 6, 3, 4, 2, 3, 6}),
-        chapter_2.SliceToLinkedList([]interface{}{1, 2, 6, 3, 4}),
+        collections.SliceToLinkedList([]interface{}{1, 2, 1, 6, 3, 4, 2, 3, 6}),
+        collections.SliceToLinkedList([]interface{}{1, 2, 6, 3, 4}),
     },
 }
 

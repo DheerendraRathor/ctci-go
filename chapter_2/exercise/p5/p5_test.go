@@ -1,47 +1,47 @@
 package p5
 
 import (
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
     "testing"
 )
 
 type testStruct struct {
-    list1 chapter_2.LinkedList
-    list2 chapter_2.LinkedList
-    reverseOutput chapter_2.LinkedList
-    forwardOutput chapter_2.LinkedList
+    list1 collections.LinkedList
+    list2 collections.LinkedList
+    reverseOutput collections.LinkedList
+    forwardOutput collections.LinkedList
 }
 
 var testData = []testStruct {
     {
-        *chapter_2.SliceToLinkedList([]interface{}{}),
-        *chapter_2.SliceToLinkedList([]interface{}{}),
-        *chapter_2.SliceToLinkedList([]interface{}{}),
-        *chapter_2.SliceToLinkedList([]interface{}{}),
+        *collections.SliceToLinkedList([]interface{}{}),
+        *collections.SliceToLinkedList([]interface{}{}),
+        *collections.SliceToLinkedList([]interface{}{}),
+        *collections.SliceToLinkedList([]interface{}{}),
     },
     {
-        *chapter_2.SliceToLinkedList([]interface{}{1}),
-        *chapter_2.SliceToLinkedList([]interface{}{}),
-        *chapter_2.SliceToLinkedList([]interface{}{1}),
-        *chapter_2.SliceToLinkedList([]interface{}{1}),
+        *collections.SliceToLinkedList([]interface{}{1}),
+        *collections.SliceToLinkedList([]interface{}{}),
+        *collections.SliceToLinkedList([]interface{}{1}),
+        *collections.SliceToLinkedList([]interface{}{1}),
     },
     {
-        *chapter_2.SliceToLinkedList([]interface{}{1, 2}),
-        *chapter_2.SliceToLinkedList([]interface{}{3, 4, 5}),
-        *chapter_2.SliceToLinkedList([]interface{}{4, 6, 5}),
-        *chapter_2.SliceToLinkedList([]interface{}{3, 5, 7}),
+        *collections.SliceToLinkedList([]interface{}{1, 2}),
+        *collections.SliceToLinkedList([]interface{}{3, 4, 5}),
+        *collections.SliceToLinkedList([]interface{}{4, 6, 5}),
+        *collections.SliceToLinkedList([]interface{}{3, 5, 7}),
     },
     {
-        *chapter_2.SliceToLinkedList([]interface{}{1, 2}),
-        *chapter_2.SliceToLinkedList([]interface{}{9, 7, 5}),
-        *chapter_2.SliceToLinkedList([]interface{}{0, 0, 6}),
-        *chapter_2.SliceToLinkedList([]interface{}{9, 8, 7}),
+        *collections.SliceToLinkedList([]interface{}{1, 2}),
+        *collections.SliceToLinkedList([]interface{}{9, 7, 5}),
+        *collections.SliceToLinkedList([]interface{}{0, 0, 6}),
+        *collections.SliceToLinkedList([]interface{}{9, 8, 7}),
     },
     {
-        *chapter_2.SliceToLinkedList([]interface{}{1, 2}),
-        *chapter_2.SliceToLinkedList([]interface{}{9, 7}),
-        *chapter_2.SliceToLinkedList([]interface{}{0, 0, 1}),
-        *chapter_2.SliceToLinkedList([]interface{}{1, 0, 9}),
+        *collections.SliceToLinkedList([]interface{}{1, 2}),
+        *collections.SliceToLinkedList([]interface{}{9, 7}),
+        *collections.SliceToLinkedList([]interface{}{0, 0, 1}),
+        *collections.SliceToLinkedList([]interface{}{1, 0, 9}),
     },
 }
 

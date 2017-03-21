@@ -1,10 +1,10 @@
 package p1
 
 import (
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
 )
 
-func RemoveDuplicates(list *chapter_2.LinkedList)  {
+func RemoveDuplicates(list *collections.LinkedList)  {
     hashMap := make(map[interface{}]bool)
 
     current := list.Head

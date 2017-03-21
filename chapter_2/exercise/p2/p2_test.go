@@ -1,24 +1,24 @@
 package p2
 
 import (
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
     "testing"
 )
 
 type testStruct struct {
-    list *chapter_2.LinkedList
+    list *collections.LinkedList
     k int32
     output interface{}
 }
 
 var testData []testStruct = []testStruct {
     {
-        chapter_2.SliceToLinkedList([]interface{}{1, 2, 3, "Hi"}),
+        collections.SliceToLinkedList([]interface{}{1, 2, 3, "Hi"}),
         2,
         3,
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{"Go", "is", "Awesome"}),
+        collections.SliceToLinkedList([]interface{}{"Go", "is", "Awesome"}),
         1,
         "Awesome",
     },
@@ -40,7 +40,7 @@ func TestGetKthFromLast2_Panic(t *testing.T) {
         }
     }()
 
-    list := chapter_2.SliceToLinkedList([]interface{}{1, 2})
+    list := collections.SliceToLinkedList([]interface{}{1, 2})
     GetKthFromLast(list, 3)
 }
 
@@ -51,6 +51,6 @@ func TestGetKthFromLast2_Panic2(t *testing.T) {
         }
     }()
 
-    list := chapter_2.SliceToLinkedList([]interface{}{1, 2})
+    list := collections.SliceToLinkedList([]interface{}{1, 2})
     GetKthFromLast(list, -1)
 }

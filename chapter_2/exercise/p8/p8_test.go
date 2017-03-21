@@ -2,11 +2,11 @@ package p8
 
 import (
     "testing"
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
 )
 
 func TestDetectCycleInList(t *testing.T) {
-    list := chapter_2.SliceToLinkedList([]interface{}{})
+    list := collections.SliceToLinkedList([]interface{}{})
 
     loopNode := DetectCycleInList(*list)
     if loopNode != nil {

@@ -1,12 +1,10 @@
 package p8
 
-import (
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
-)
+import "github.com/DheerendraRathor/ctci-go/collections"
 
 //Detect if linked list has loop and return the starting point of loop
 // If there is no loop then it will return nil
-func DetectCycleInList(list chapter_2.LinkedList) *chapter_2.Node {
+func DetectCycleInList(list collections.LinkedList) *collections.Node {
     slowPtr := list.Head
     fastPtr := list.Head
 

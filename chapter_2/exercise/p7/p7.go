@@ -1,11 +1,11 @@
 package p7
 
-import "github.com/DheerendraRathor/ctci-go/chapter_2"
+import "github.com/DheerendraRathor/ctci-go/collections"
 
 // Caveats:
 // If their is actually an intersection, then end node will be the same for both lists
 // Since we're dealing with singly linked lists, we'll be using only Next to solve this issue
-func GetIntersectionOfLists(list1 chapter_2.LinkedList, list2 chapter_2.LinkedList) *chapter_2.Node {
+func GetIntersectionOfLists(list1 collections.LinkedList, list2 collections.LinkedList) *collections.Node {
 
     // Last is implemented only by using Next
     list1LastNode := list1.Last()
@@ -33,7 +33,7 @@ func GetIntersectionOfLists(list1 chapter_2.LinkedList, list2 chapter_2.LinkedLi
         ffListCurrentNode = ffListCurrentNode.Next
     }
 
-    var intersection *chapter_2.Node
+    var intersection *collections.Node
     for true {
         if ffListCurrentNode == otherListCurrentNode {
             intersection = ffListCurrentNode

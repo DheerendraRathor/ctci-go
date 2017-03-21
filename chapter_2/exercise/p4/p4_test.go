@@ -1,26 +1,26 @@
 package p4
 
 import (
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
     "testing"
 )
 
 type  testStruct struct{
-    input *chapter_2.LinkedList
+    input *collections.LinkedList
     pivot int
-    output *chapter_2.LinkedList
+    output *collections.LinkedList
 }
 
 var testData = []testStruct {
     {
-        chapter_2.SliceToLinkedList([]interface{}{}),
+        collections.SliceToLinkedList([]interface{}{}),
         2,
-        chapter_2.SliceToLinkedList([]interface{}{}),
+        collections.SliceToLinkedList([]interface{}{}),
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1, 4, 5, 2, 3, -1, 0}),
+        collections.SliceToLinkedList([]interface{}{1, 4, 5, 2, 3, -1, 0}),
         2,
-        chapter_2.SliceToLinkedList([]interface{}{1, -1, 0, 4, 5, 2, 3}),
+        collections.SliceToLinkedList([]interface{}{1, -1, 0, 4, 5, 2, 3}),
     },
 }
 

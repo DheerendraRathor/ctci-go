@@ -1,17 +1,17 @@
 package p7
 
 import (
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
     "testing"
 )
 
-var list1 = *chapter_2.SliceToLinkedList([]interface{}{1, 2, 3, 4, 5})
-var list2 = *chapter_2.SliceToLinkedList([]interface{}{1, 2})
+var list1 = *collections.SliceToLinkedList([]interface{}{1, 2, 3, 4, 5})
+var list2 = *collections.SliceToLinkedList([]interface{}{1, 2})
 
-var list3 = *chapter_2.SliceToLinkedList([]interface{}{1, 2, 9})
+var list3 = *collections.SliceToLinkedList([]interface{}{1, 2, 9})
 
-var list5 = *chapter_2.SliceToLinkedList([]interface{}{})
-var list6 = *chapter_2.SliceToLinkedList([]interface{}{})
+var list5 = *collections.SliceToLinkedList([]interface{}{})
+var list6 = *collections.SliceToLinkedList([]interface{}{})
 
 func TestGetIntersectionOfLists(t *testing.T) {
     emptyListIntersection := GetIntersectionOfLists(list5, list6)

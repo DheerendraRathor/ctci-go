@@ -1,38 +1,38 @@
 package p6
 
 import (
-    "github.com/DheerendraRathor/ctci-go/chapter_2"
+    "github.com/DheerendraRathor/ctci-go/collections"
     "testing"
 )
 
 type testStruct struct {
-    input *chapter_2.LinkedList
+    input *collections.LinkedList
     isPalindrome bool
 }
 
 var testData = []testStruct {
     {
-        chapter_2.SliceToLinkedList([]interface{}{}),
+        collections.SliceToLinkedList([]interface{}{}),
         true,
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1}),
+        collections.SliceToLinkedList([]interface{}{1}),
         true,
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1, 2, 1}),
+        collections.SliceToLinkedList([]interface{}{1, 2, 1}),
         true,
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1, 2, 2, 1}),
+        collections.SliceToLinkedList([]interface{}{1, 2, 2, 1}),
         true,
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1, 2, 3}),
+        collections.SliceToLinkedList([]interface{}{1, 2, 3}),
         false,
     },
     {
-        chapter_2.SliceToLinkedList([]interface{}{1, 2, 3, 1}),
+        collections.SliceToLinkedList([]interface{}{1, 2, 3, 1}),
         false,
     },
 }

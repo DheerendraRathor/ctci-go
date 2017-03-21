@@ -1,9 +1,9 @@
 package p5
 
-import "github.com/DheerendraRathor/ctci-go/chapter_2"
+import "github.com/DheerendraRathor/ctci-go/collections"
 
-func ReverseOrderLinkedListAddition(list1 chapter_2.LinkedList, list2 chapter_2.LinkedList) *chapter_2.LinkedList {
-    outputList := new(chapter_2.LinkedList)
+func ReverseOrderLinkedListAddition(list1 collections.LinkedList, list2 collections.LinkedList) *collections.LinkedList {
+    outputList := new(collections.LinkedList)
 
     currentList1Node := list1.Head
     currentList2Node := list2.Head
@@ -36,8 +36,8 @@ func ReverseOrderLinkedListAddition(list1 chapter_2.LinkedList, list2 chapter_2.
     return outputList
 }
 
-func ForwardOrderLinkedListAddition(list1 chapter_2.LinkedList, list2 chapter_2.LinkedList) *chapter_2.LinkedList {
-    outputList := new(chapter_2.LinkedList)
+func ForwardOrderLinkedListAddition(list1 collections.LinkedList, list2 collections.LinkedList) *collections.LinkedList {
+    outputList := new(collections.LinkedList)
 
     currentList1Node := list1.Last()
     currentList2Node := list2.Last()

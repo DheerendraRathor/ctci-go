@@ -1,13 +1,13 @@
 package p4
 
-import "github.com/DheerendraRathor/ctci-go/chapter_2"
+import "github.com/DheerendraRathor/ctci-go/collections"
 
-func PartitionOfList(list *chapter_2.LinkedList, pivot int) *chapter_2.LinkedList {
-    lessThanList := new(chapter_2.LinkedList)
-    greaterThanOrEqualList := new(chapter_2.LinkedList)
+func PartitionOfList(list *collections.LinkedList, pivot int) *collections.LinkedList {
+    lessThanList := new(collections.LinkedList)
+    greaterThanOrEqualList := new(collections.LinkedList)
 
     // This variable will store last node in lessThanList. So that we can merge greaterThanOrEqualList directly.
-    var lastLessThanNode *chapter_2.Node;
+    var lastLessThanNode *collections.Node;
 
     currentNode := list.Head
     for currentNode != nil {
