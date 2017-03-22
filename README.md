@@ -2,3 +2,7 @@
 [![Codecov](https://img.shields.io/codecov/c/github/DheerendraRathor/ctci-go/master.svg?style=flat-square)]()
 # CTCI-Go
 Implementation of Cracking the Coding Interview by Gayle Laakmann McDowell in Golang
+
+### Dependencies
+- *testfiy/assert*  
+  `go get github.com/stretchr/testify/assert`

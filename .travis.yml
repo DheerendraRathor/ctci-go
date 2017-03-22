@@ -1,6 +1,7 @@
 language: go
 
 before_install:
+  - go get github.com/stretchr/testify/assert
   - go get -t -v ./...
 
 script:
