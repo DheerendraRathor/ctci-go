@@ -7,7 +7,6 @@ import (
 
 func Compressor(input string) string {
     length := len(input)
-    println(length, input)
     if length <= 1 {
         return input
     }
