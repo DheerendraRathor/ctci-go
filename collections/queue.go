@@ -3,6 +3,7 @@ package collections
 type Queue struct {
     first *Node
     last *Node
+    length int
 }
 
 func (q *Queue) IsEmpty() bool {
@@ -19,6 +20,8 @@ func (q *Queue) Add(item interface{}) {
         q.last.Next = newNode
         q.last = newNode
     }
+
+    q.length++
 }
 
 func (q *Queue) Remove() (interface{}, *DataStructureEmptyError) {
@@ -36,6 +39,7 @@ func (q *Queue) Remove() (interface{}, *DataStructureEmptyError) {
         q.first = q.first.Next
     }
 
+    q.length--
     return topNode.Value, nil
 }
 
@@ -45,4 +49,8 @@ func (q *Queue) Peek() (interface{}, *DataStructureEmptyError) {
     }
 
     return q.first.Value, nil
+}
+
+func (q *Queue) Length() int {
+    return q.length
 }
