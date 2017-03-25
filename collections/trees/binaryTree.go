@@ -1,4 +1,4 @@
-package collections
+package trees
 
 import (
     "github.com/DheerendraRathor/ctci-go/utils"

@@ -1,5 +1,7 @@
 // Min heap implementation for integers. It is not done for `interface{}` type as we can't compare these things
-package collections
+package heaps
+
+import "github.com/DheerendraRathor/ctci-go/collections"
 
 type MinHeap struct {
     array []int
@@ -16,17 +18,17 @@ func (mh *MinHeap) Push(val int) {
     mh.heapifyBottomUp(mh.size - 1)
 }
 
-func (mh *MinHeap) Top() (int, *DataStructureEmptyError) {
+func (mh *MinHeap) Top() (int, *collections.DataStructureEmptyError) {
     if mh.size > 0 {
         return mh.array[0], nil
     } else {
-        return 0, &DataStructureEmptyError{}
+        return 0, &collections.DataStructureEmptyError{}
     }
 }
 
-func (mh *MinHeap) Pop() (int, *DataStructureEmptyError) {
+func (mh *MinHeap) Pop() (int, *collections.DataStructureEmptyError) {
     if mh.size <= 0 {
-        return 0, &DataStructureEmptyError{}
+        return 0, &collections.DataStructureEmptyError{}
     }
 
     top := mh.array[0]

@@ -1,4 +1,4 @@
-package collections
+package trees
 
 // Trie for unicode chars
 // Value stores the value corresponding to string for e.g. it can store phone number for a name
